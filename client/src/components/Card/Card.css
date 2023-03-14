@@ -1,0 +1,82 @@
+.card-body
+{
+    margin: 1rem;
+    width: 250px;
+    height: 400px;
+    max-width: 250px;
+    max-height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.5s;
+    animation: ease-in-out;
+    width: fixed;
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
+.card-body:hover
+{  
+    transform: scale(1.03);
+    box-shadow: 0px 0px 15px 0px;
+}
+.img-container img
+{   max-height: 200px;
+    max-width: 300px;
+    overflow: hidden;
+    height: 200px;
+
+}
+.card-content
+{
+    margin: 1rem;
+    margin-top: 0.3rem;
+    overflow: hidden;
+    height:25%;
+
+
+}
+.card-content h3,p
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+.card-content p
+{
+    font-size:x-small;
+}
+.card-title
+{
+    margin-bottom: 0.5rem;
+
+}
+
+.view-btn 
+{
+    display: flex;
+    justify-content: center;
+}
+.view-btn button:hover
+{
+    background: linear-gradient(red,green,blue);
+
+
+}
+.view-btn button
+{
+    padding: 0.5rem;
+    background-color: white;
+    border: none;
+    transition: 0.2s;
+    margin: 0.5rem;
+    border-radius: 2cm;
+    transform: scale(1.1);
+}
+.view-btn button a
+{
+    text-transform: uppercase;
+    color: magenta;
+    text-decoration: none;
+
+}

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    .form-title {
+        font-family: 'Tilt Warp', cursive;
+        
+    }
+  }
+
+.listprop-form
+{
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD";
+    font-size:100%;
+    
+}
+.listprop-form div
+{
+    @apply p-2
+}
+.listprop-form div input
+{
+    @apply border border-gray-200 w-[90%] p-3  rounded-[2rem]
+}
+.listprop-form div h4
+{
+    @apply font-bold text-xl
+}
+.listprop-form select
+{
+    @apply border border-gray-200 w-[90%] p-3 rounded-md
+}
+.listprop-form select option:hover{
+    @apply bg-[#ff0000] border border-gray-200 w-80 p-3 rounded-md
+}
