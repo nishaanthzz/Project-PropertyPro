@@ -2,10 +2,11 @@ import './Sellpage2.css'
 import React from 'react'
 import './formstates.js';
 import { useState} from 'react';
-
+import {useNavigate} from "react-router-dom";
 import axios from 'axios';
 const SellPage2 = () => {
   const data=new FormData();
+  const navigate = useNavigate();
 
                                                                         const [fName,setFName]=useState("")
                                                                         const [lName,setLName]=useState("")
@@ -24,12 +25,12 @@ const SellPage2 = () => {
                                                                         const [persqft,setPersqft]=useState(0)
                                                                         const [images,setImages]=useState();
                                                                         const [advance,setAdvance]=useState("0")
-                                                                        const [imageUrl,setImageUrl]=useState("")
+                                                                        // const [imageUrl,setImageUrl]=useState("")
                                                                         const [pincode,setPincode]=useState("")
   
-                                                                        const createObj=(e)=>
+                                                                        const createObj= (imageUrl)=>
                                                                         { 
-                                                                          
+                                                                         
 
                                                                           let listing_details=
                                                                         {
@@ -50,12 +51,13 @@ const SellPage2 = () => {
                                                                           description: description,
                                                                           postedDate: new Date(),
                                                                           interests: 0,
-                                                                          imageUrl: imageUrl,
+                                                                          imageUrl: imageUrl
                                                                         }
-                                                                        axios.post('http://localhost:5000/propertypro/post/ForSale',listing_details)
+                                                                       axios.post('http://localhost:5000/propertypro/post/ForSale',listing_details)
                                                                         .then((res)=>
-                                                                        {if(res.status==='Success'){console.log("Posted on the wall!!")}} )
-                                                                        console.log("Uploaded")
+                                                                        {console.log("Posted on the wall!!")} ).catch((err)=>console.log(err))
+                                                                        navigate('/')
+                                                                       
 
                                                                         }
                                                                         const handleImgUpload= (e)=>
@@ -66,17 +68,14 @@ const SellPage2 = () => {
                                                                           data.append('file',images);
                                                                           data.append('upload_preset','makppttx');
                                                                           data.append('cloud_name','drwvpgnza')
-                                                                          console.log(data);
-                                                                           fetch("https://api.cloudinary.com/v1_1/drwvpgnza/image/upload",
+                                                                         
+                                                                          fetch("https://api.cloudinary.com/v1_1/drwvpgnza/image/upload",
                                                                           {
                                                                             method: "post",
                                                                             body : data,
-                                                                          }).then((res)=>res.json())
-                                                                          .then((data)=>
-                                                                            { console.log(data)
-                                                                              setImageUrl(data.url)
-
-                                                                            }).then(createObj(e))
+                                                                          })
+                                                                          .then((res)=>res.json())
+                                                                          .then((data)=>createObj(data.url))
                                                                             .catch((err)=>console.log(err));
                                                                             
 
@@ -98,7 +97,7 @@ const SellPage2 = () => {
   return (
     <div className=' mx-auto my-5 bg-gradient-to-r from-[#ffd1d1] to-[#ffd0d0] w-4/5 text-center border border-solid border-[#7931ed] rounded-[2rem]'>
       <div><h1 className='form-title text-5xl my-10 font-bold text-[#391a59]'>POST YOUR PROPERTY ON THE WALL TODAY!</h1></div>
-        <form className='listprop-form ' onSubmit={handleImgUpload}>
+        <form action="http://localhost:3000/" method="post" className='listprop-form ' onSubmit={handleImgUpload}>
           <div className="all-inps grid grid-cols-3 gap-3 ">
             <div className="p-5">
               <h4 className=''>First Name</h4>
@@ -110,9 +109,9 @@ const SellPage2 = () => {
             
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Tilt+Warp&display=swap" rel="stylesheet" />
+                                              <link rel="preconnect" href="https://fonts.googleapis.com" />
+                                              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                                              <link href="https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Tilt+Warp&display=swap" rel="stylesheet" />
 
 
 
