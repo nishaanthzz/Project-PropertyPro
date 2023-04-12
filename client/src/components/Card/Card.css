@@ -1,77 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    .card-body{
+        font-family: 'Tilt Warp', cursive;
+        
+    }
+  }
+
 .card-body
 {
-    margin: 1rem;
-    width: 250px;
-    height: 400px;
-    max-width: 250px;
-    max-height: 400px;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px -5px;
-    transition: 0.5s;
-    animation: ease-in-out;
-    width: fixed;
-    border-radius: 5px;
-    background-color: aliceblue;
+    
+
+    @apply  w-64 h-96 overflow-hidden shadow-md transition duration-500 ease-in rounded-xl bg-[aliceblue] 
 
 }
 .card-body:hover
 {  
-    transform: scale(1.03);
-    box-shadow: 0px 0px 15px 0px;
+    /* transform: scale(1.03);
+    box-shadow: 0px 0px 15px 0px; */
+    @apply scale-[1.03] shadow-lg;
 }
 .img-container img
-{   max-height: 200px;
-    max-width: 300px;
-    overflow: hidden;
-    height: 200px;
+{   
+    @apply  overflow-hidden h-52 w-72 ;
 
 }
 .card-content
 {
-    margin: 1rem;
-    margin-top: 0.3rem;
-    overflow: hidden;
-    height:25%;
+    @apply m-[1rem] mt-[0.3rem] overflow-hidden h-[25%] ;
+   
+    
 
 
 }
 .card-content h3,p
 {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    
+    @apply text-[#000] text-sm font-bold;
 
 }
 .card-content p
 {
-    font-size:x-small;
+
+    @apply text-[#000] text-sm font-light ;
 }
 .card-title
 {
-    margin-bottom: 0.5rem;
+   
+    @apply mb-[0.5rem] text-[#000] text-sm font-bold;
 
 }
 
 .view-btn 
 {
-    display: flex;
-    justify-content: center;
+   
+    @apply flex justify-center;
 }
 .view-btn button:hover
-{
-    background: linear-gradient(red,green,blue);
+{   
+    
+    @apply scale-[1.2] bg-gradient-to-r from-[#200003] to-blue-500;
 
 
 }
 .view-btn button
 {
-    padding: 0.5rem;
-    background-color: white;
-    border: none;
-    transition: 0.2s;
-    margin: 0.5rem;
-    border-radius: 2cm;
-    transform: scale(1.1);
+    
+    @apply p-[0.5rem] bg-white border-none transition duration-500 ease-in-out rounded-full scale-[1.1] ;
 }
 .view-btn button a
 {

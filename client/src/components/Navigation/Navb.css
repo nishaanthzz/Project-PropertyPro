@@ -6,13 +6,13 @@
 
 @layer base {
   .Navbar-head {
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD";
+    font-family: montserrat;
   }
 }
 
 .Navbar-head
 { 
-  @apply flex w-full h-40 bg-[#fbfbfb] font-black tracking-widest text-5xl border-b-4 border-solid border-[#ff0000]
+  @apply  flex w-[100%] bg-[#fbfbfb] font-black  text-4xl border-b-4 border-solid border-[#ff0000] lg:border-[#282828] lg:scale-[1.0] box-border
 
 }
 
@@ -20,33 +20,37 @@
 
 .Navbar-head .Navbar-headings
 {
-  @apply flex items-center list-none justify-center p-2.5 m-2.5
+  @apply flex items-center list-none justify-center 
   
 }
 .Navbar-head .Navbar-headings .Nav-obj
 {
-  @apply h-auto text-center mx-1 text-[#000000]
+  @apply lg:h-12 text-center text-[#000000] mx-2 no-underline p-2 lg:p-4 rounded-3xl border-solid border-transparent border-2 duration-[0.2s]
+}
+.Navbar-head .Navbar-headings .Nav-obj .nh
+{
+  @apply flex justify-center text-center -translate-y-2.5
 }
 
 
 
-.Navbar-head .Navbar-headings .Nav-obj, .dropdown ul li ul
+.dropdown ul li ul
 {
 
-  @apply mx-2 no-underline pt-0 pr-3 pl-3.5   py-4  rounded-3xl border-solid border-transparent border-2 duration-[0.2s]
+  @apply no-underline rounded-3xl border-solid border-transparent border-2 duration-[0.2s] pl-6
 }
 .Navbar-head .Navbar-headings .Nav-obj:hover
 {
   /* From https://css.glass */
-background: rgba(256, 10, 3, 0.85);
+
 border-radius: 25px;
 box-shadow: 0 0.25rem 4rem rgba(255, 3, 3, .25);
 backdrop-filter: blur(0.25rem);
 -webkit-backdrop-filter: blur(2rem);
 
-  height: auto;
+
   border: solid black 2px;
-  @apply rounded-3xl
+  @apply rounded-3xl bg-[#ff00005f] text-[#ffffff] border-[#ff939340] duration-[0.2s] scale-[1.09]
   
 
   
@@ -54,39 +58,41 @@ backdrop-filter: blur(0.25rem);
 
 }
 .Navbar-head .Navbar-headings ul li ul {
-  @apply translate-y-5;
+ @apply m-auto
 }
 .nh, .dropdown ul li
 {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  text-shadow: 2px 2px 4px rgb(114, 111, 111);
-  font-size: 20px;
+  
+  font-size: 1rem;
             -webkit-text-stroke-width: 0.5px;
             -webkit-text-stroke-color: black;
 
   
             
 }
+
 .add-list-btn
 {
-  @apply cursor-pointer rounded-[1rem] text-end p-4 h-full text-xl
+  @apply cursor-pointer pl-3 
 }
 
 .add-list-btn span
 {
-  @apply text-[1.3rem] h-auto m-auto font-extrabold pl-2.5
+  @apply text-[60%] font-extrabold pt-[3%] pl-2 tracking-wide inline whitespace-nowrap -translate-y-1;
+
 }
 .list-link 
-{
-  @apply ml-28 text-black flex h-[40%] no-underline
+{ background: linear-gradient(to right, rgb(255, 57, 57),rgb(255, 95, 95));
+  @apply  text-black flex h-[40%] no-underline m-auto w-[13rem] scale-[0.8] rounded-[1rem]
   
   
 
 }
 .list-link button{
-  background: linear-gradient(to right, rgb(255, 57, 57),rgb(255, 95, 95));
-  @apply flex items-center scale-[0.8] m-auto translate-x-[-20%] translate-y-[100%] text-white
+  
+  @apply flex items-center justify-center  text-white
 
 }
                                       /* dropdown */
@@ -98,7 +104,7 @@ backdrop-filter: blur(0.25rem);
                                         -ms-transition: all 0.2s;
                                         -o-transition: all 0.2s;
                                         transition: all 0.2s;
-                                        @apply  relative cursor-pointer
+                                        @apply  relative cursor-pointer 
                                       }
                                       
                                       .dropdown ul li ul {
@@ -114,19 +120,19 @@ backdrop-filter: blur(0.25rem);
                                         -transition: opacity 0.2s;
                                         box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
                                       
-                                      @apply border-4 bg-[#f2f6f6] p-4 absolute w-52 m-1
+                                      @apply border-4 bg-[#f2f6f6] p-4 absolute w-52 translate-y-8
                                       
                                       }
                                       .dropdown ul li ul li { 
                                        
                                       
-                                        @apply p-2 my-0 mx-auto w-40 py-4  block text-[#000000] text-center rounded-3xl
+                                        @apply p-2 my-0 mx-auto w-40  block text-[#000000] text-center rounded-3xl
                                       }
                                       .dropdown ul li ul li:hover 
                                       { 
                                         
                                         transform: scale(1.2);
-                                        @apply bg-[#ff0505]
+                                        @apply bg-[#ff050553]
                                       }
                                       .dropdown ul li:hover ul {
                                         

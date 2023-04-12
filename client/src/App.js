@@ -12,6 +12,7 @@ import ForSalePage  from './pages/ForSalePage/ForSalePage';
 import SellPage2 from './pages/SellPage2/SellPage2';
 import { Navigate } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import UnitSale from './pages/UnitsSale/UnitSale';
 function App() {
   return (
     <div className="App">
@@ -27,7 +28,8 @@ function App() {
       
       <Route exact path="/ForSale" element={<ForSalePage/>}/>
       <Route exact path="/SellPage" element={<SellPage2/>}/>
-      <Route path='*' element={<Navigate to='/' />} />
+      <Route path='*' element={<Navigate />} />
+      <Route path='/Unit/:id' element={<UnitSale/>} />
       </Routes>
 
 

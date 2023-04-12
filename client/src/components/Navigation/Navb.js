@@ -10,8 +10,8 @@ const Navb=()=>
 {
     return(
         
-      <nav className="Navbar-head h-44">
-        <img src={logo}  className="object-contain h-38 w-96"/>
+      <nav className="Navbar-head h-96 md:h-44">
+        <img src={logo}  alt="Not FOUND " className="object-contain w-[40%] md:w-[30%] "/>
       <ul className='Navbar-headings'>
         <li className='Nav-obj'><a className='nh' href="/">Home</a></li>
         <li className='Nav-obj '>
@@ -20,8 +20,8 @@ const Navb=()=>
        
                           <menu className="dropdown h-8">
                           <ul>
-                            <li className="translate-x-0.5 translate-y-4   ml-2 mr-3 flex text-center justify-center">
-                              Properties<IoIosArrowDropdownCircle className="inline translate-x-2 translate-y-1 scale-150"/>
+                            <li className="translate-x-0.5  -translate-y-2.5 mr-3 flex text-center justify-center">
+                              Properties<IoIosArrowDropdownCircle className="translate-x-2 translate-y-2.5 scale-150"/>
                               <ul>
                                 <li><Link to="/ForSale">Buy</Link></li>
                                 <li>Rent/Lease</li>
@@ -40,14 +40,14 @@ const Navb=()=>
         <li className='Nav-obj'><Link className='nh' to="/About">About</Link></li>
         <li className='Nav-obj'><Link className='nh' to="/ContactUs">ContactUs</Link></li>
       </ul>
-      <Link to='/SellPage' className='list-link  -translate-y-5 '>
-      <button className="add-list-btn " 
-      autoFocus>
-        
-        <AiFillPlusCircle size={40} />
-        <span className="title text-lg -translate-y-3 pt-5">Post a Listing</span> 
-        
-      </button>
+      <Link to='/SellPage' className=' list-link  duration-[1.02s] hover:scale-[1.02] border-[3px] border-[#101001] '>
+                <button  className="add-list-btn p-2" 
+                >
+                  
+                  <AiFillPlusCircle size={40} />
+                  <span className="title">Post a Listing</span> 
+                  
+                </button>
       </Link> 
       
     </nav>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './LandScapeCard.css'
+import { Link } from 'react-router-dom';
 
 const LandscapeCard = (prop) => {
 
@@ -10,11 +11,10 @@ const LandscapeCard = (prop) => {
   return (
 
     
-    <div className='landscape-body w-[80%] m-auto bg-[#ff7361a1] border-solid border-4 border-[#000000] h-52 rounded-[20px]'>
+    <div className=' bg-[#ff7664a1] landscape-body w-[80%] m-auto  border-solid border-4 border-[#000000] h-52 rounded-[20px]'>
         <div className='lcard h-10 grid grid-cols-[30%_45%_25%] gap-3'>
           <div className='image-slides'>
               <img src={obj.imageUrl} alt="No image" className='h-48 my-auto p-2 rounded-[20px]' />
-
           </div>
           <div className='property-details '>
               <h3 className='text-4xl pt-2 font-[1100] '>{obj.bhk}BHK at {obj.locality}, {obj.city}</h3>
@@ -26,9 +26,11 @@ const LandscapeCard = (prop) => {
           </div>
           <div className='contact-details  flex text-center justify-center '>
           <div className='m-auto width-[60%] ' >
+          <Link to={`/Unit/${obj._id}`}>
             <button
               className='p-4 bg-red-500 rounded-full'
               >See More</button>
+              </Link>
           </div>
           </div>
             

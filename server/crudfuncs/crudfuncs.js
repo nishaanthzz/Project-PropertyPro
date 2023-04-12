@@ -17,11 +17,14 @@ exports.getForSale= async (req, res)=>
 }
 exports.getForSaleID=   async (req, res)=>{
     try {
-        const obj= ForSaleModel.find({_id: req.params.id});
-        res.send({"status": "Success", "data": obj})
+        
+        obj= await ForSaleModel.findById( req.params.id);
+       
+        res.status(200).json({"status": "Success", "data": obj})
+        
     }
     catch (err) {
-        res.send({status:"Failed","mesaage":"Insert failed",err});
+        res.status(404).json({status:"Failed","mesaage":"Get failed",error: err.message});
     }
 
 }
@@ -29,7 +32,7 @@ exports.getForSaleID=   async (req, res)=>{
 
 exports.postForSale= async (req, res)=>{
     try {
-        console.log(req.body)
+        
     const obj = await ForSaleModel.create(req.body);
     res.send({"status":"Success",
     "data":obj })}

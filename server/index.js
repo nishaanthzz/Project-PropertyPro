@@ -31,7 +31,7 @@ app.post('/propertypro/post/ForSale', crudfuncs.postForSale);
 
 app.get('/propertypro/get/ForSale', crudfuncs.getForSale);
 
-app.post('/propertypro/get/ForSale/:id', crudfuncs.getForSaleID);
+app.get('/propertypro/get/ForSale/:id', crudfuncs.getForSaleID);
 
 
 
