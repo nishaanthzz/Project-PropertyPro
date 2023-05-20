@@ -73,26 +73,13 @@ backdrop-filter: blur(0.25rem);
             
 }
 
-.add-list-btn
-{
-  @apply cursor-pointer pl-3 
-}
 
-.add-list-btn span
-{
-  @apply text-[60%] font-extrabold pt-[3%] pl-2 tracking-wide inline whitespace-nowrap -translate-y-1;
 
-}
 .list-link 
 { background: linear-gradient(to right, rgb(255, 57, 57),rgb(255, 95, 95));
   @apply  text-black flex h-[40%] no-underline m-auto w-[13rem] scale-[0.8] rounded-[1rem]
   
   
-
-}
-.list-link button{
-  
-  @apply flex items-center justify-center  text-white
 
 }
                                       /* dropdown */

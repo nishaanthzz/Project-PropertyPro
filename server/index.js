@@ -37,5 +37,5 @@ app.get('/propertypro/get/ForSale/:id', crudfuncs.getForSaleID);
 
 
 app.listen(process.env.PORT,()=>{
-console.log('listening on port '+process.env.PORT+"...");
+console.log('Listening on port '+process.env.PORT+"...");
 })

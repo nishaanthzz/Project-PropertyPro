@@ -34,8 +34,7 @@ const SellPage2 = () => {
 
                                                                           let listing_details=
                                                                         {
-                                                                          name: {fName: fName,
-                                                                                lName: lName},
+                                                                          name: fName+" "+lName,
                                                                           phno: phno,
                                                                           email: email,
                                                                           type: type,

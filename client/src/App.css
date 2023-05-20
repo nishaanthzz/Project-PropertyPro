@@ -1,11 +1,10 @@
 body{
   background-image: url(./assets/bg.jpg);
-  /* background: opacity 1px; */
+  
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  /* background-color: #0055ffaa;     */
-  /* opacity: 90%; */
+  background-size: cover
+  
            
 }
 .App-header {

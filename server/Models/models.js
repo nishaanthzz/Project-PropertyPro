@@ -1,18 +1,15 @@
 const mongoose = require('mongoose');
 const ForSaleSchema=new mongoose.Schema({
 
-    name: { type: {
-        firstName:{type:String},
-        lastName: {type:String}
-    },},
-    phone: { type:String},
+    name: String,
+    phone: String,
     email : { type:String},
     type: { type:String,enum: ['Residential','Commmerical']},
     bhk: { type:Number},
     address: { type: String},
     locality: { type:String},
     city: { type: String},
-    state: { type: String},
+    state: String, 
     pincode:{type:String},
     area: { type: Number},
     price: { type: Number},

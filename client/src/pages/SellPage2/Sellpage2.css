@@ -19,6 +19,7 @@
     @apply p-2
 }
 .listprop-form div input
+
 {
     @apply border border-gray-200 w-[90%] p-3  rounded-[2rem]
 }
@@ -32,4 +33,8 @@
 }
 .listprop-form select option:hover{
     @apply bg-[#ff0000] border border-gray-200 w-80 p-3 rounded-md
+}
+.listprop div input:invalid
+{   animation: shake 0.5s 5;
+    @apply border border-red-500
 }

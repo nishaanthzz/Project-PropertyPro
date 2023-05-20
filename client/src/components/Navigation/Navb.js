@@ -41,11 +41,14 @@ const Navb=()=>
         <li className='Nav-obj'><Link className='nh' to="/ContactUs">ContactUs</Link></li>
       </ul>
       <Link to='/SellPage' className=' list-link  duration-[1.02s] hover:scale-[1.02] border-[3px] border-[#101001] '>
-                <button  className="add-list-btn p-2" 
+                <button  className="add-list-btn p-2 cursor-pointer pl-3 flex items-center justify-center  text-white
+" 
                 >
                   
                   <AiFillPlusCircle size={40} />
-                  <span className="title">Post a Listing</span> 
+                  <span className="title text-[60%] font-extrabold pt-[3%] pl-2 tracking-wide inline whitespace-nowrap -translate-y-1;">
+                    Post a Listing
+                    </span> 
                   
                 </button>
       </Link> 
