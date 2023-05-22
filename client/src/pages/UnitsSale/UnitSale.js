@@ -9,7 +9,7 @@ const getdata= async ()=>
 { const obj = await axios.get(`http://localhost:5000/propertypro/get/ForSale/${id}`);
 setData(obj["data"]["data"])
 console.log(obj["data"]["data"])
-console.log(data.name)
+// console.log(data.name.firstName+" "+data.name.lastName)
 }
   const {id}=useParams();
   useEffect(()=>

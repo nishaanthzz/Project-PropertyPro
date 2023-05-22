@@ -46,7 +46,7 @@ exports.deleteForSale= async (req, res)=>{
     try {
     }
     catch (err) {
-        res.send({status:"Failed","mesaage":"Insert failed",err});
+        res.json({status:"Failed","mesaage":"Insert failed",err});
     }
 
 
@@ -78,6 +78,18 @@ exports.getRentLeaseID= async(req, res)=>{
 
 
 
+exports.updateInterests= async (req, res)=>{
+    try {
+       
+       result = await ForSaleModel.findByIdAndUpdate(req.params.id,req.body);
+         res.status(200).json({"status":"Success",
+            "data":result })}
+    
+    catch (err) {
+        res.status(400).json({status:"Failed","message":"Insert failed",err});
+    }
+
+}
 exports.postRentLease= async (req, res)=>{
     try {
         const obj = await ForSaleModel.create(req.body);
@@ -141,4 +153,5 @@ exports.deletePlots= async (req, res)=>{
     }
 
 }
+
 

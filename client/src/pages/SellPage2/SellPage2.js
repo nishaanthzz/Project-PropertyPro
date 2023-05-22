@@ -11,7 +11,7 @@ const SellPage2 = () => {
                                                                         const [fName,setFName]=useState("")
                                                                         const [lName,setLName]=useState("")
                                                                         const [description,setDescription]=useState("")
-                                                                        const [sbrl,setSbrl]=useState("")
+                                                                        // const [sbrl,setSbrl]=useState("")
                                                                         const [phno,setPhno]=useState("")
                                                                         const [email,setEmail]=useState("")
                                                                         const [area,setArea]=useState(0)
@@ -22,9 +22,9 @@ const SellPage2 = () => {
                                                                         const [state,setState]=useState("")
                                                                         const [type,setType]=useState("Residential")
                                                                         const [bhk,setBhk]=useState(0)
-                                                                        const [persqft,setPersqft]=useState(0)
+                                                                        // const [persqft,setPersqft]=useState(0)
                                                                         const [images,setImages]=useState();
-                                                                        const [advance,setAdvance]=useState("0")
+                                                                        // const [advance,setAdvance]=useState("0")
                                                                         // const [imageUrl,setImageUrl]=useState("")
                                                                         const [pincode,setPincode]=useState("")
   
@@ -34,7 +34,7 @@ const SellPage2 = () => {
 
                                                                           let listing_details=
                                                                         {
-                                                                          name: fName+" "+lName,
+                                                                          name: {firstName: fName, lastName: lName},
                                                                           phno: phno,
                                                                           email: email,
                                                                           type: type,

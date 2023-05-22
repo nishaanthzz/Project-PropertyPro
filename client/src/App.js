@@ -6,13 +6,12 @@ import {About} from './pages/About/About';
 import { ContactUs} from './pages/ContactUs/ContactUs';
 import {Home} from './pages/Home/Home.js'
 import React from 'react';
-import { FullDeets } from './pages/FullDeets/FullDeets';
-import Sellpage from './pages/Sellpage/Sellpage';
 import ForSalePage  from './pages/ForSalePage/ForSalePage';
 import SellPage2 from './pages/SellPage2/SellPage2';
 import { Navigate } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import UnitSale from './pages/UnitsSale/UnitSale';
+import Login from './pages/Login/Login';
 function App() {
   return (
     <div className="App">
@@ -30,6 +29,7 @@ function App() {
       <Route exact path="/SellPage" element={<SellPage2/>}/>
       <Route path='*' element={<Navigate />} />
       <Route path='/Unit/:id' element={<UnitSale/>} />
+      <Route path='/Login' element={<Login/>} />
       </Routes>
 
 

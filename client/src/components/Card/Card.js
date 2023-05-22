@@ -1,17 +1,23 @@
 import './Card.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
+import axios from 'axios';
 
 const Card=(prop)=>
 {   
 let obj=prop.obj
 console.log(obj)
 
-    
+   const updateInterests= async (e)=>
+   {
+      let result = await axios.patch(`http://localhost:5000/ForSale/UpdateInterests/${obj._id} `, {interests:obj.interests+1});
+      console.log(result);
+      window.location.href = "http://localhost:3000/Unit/"+obj._id;
+
+   }
     return(
-      <Link to={`/Unit/${obj._id}`}>
-         
-        <div className='card-body border-solid border-[3px] border-[#000000] cursor-pointer'>
+       
+       <div className='card-body border-solid border-[3px] border-[#000000] cursor-pointer'>
              <div className='img-container'>
                 <img src={obj.imageUrl} alt="Failed to Load" />
              </div>
@@ -27,17 +33,18 @@ console.log(obj)
 
              </div>
              </div> 
+           {/* <Link to={`/Unit/${obj._id}`}> */}
              <div className='view-btn'>
-                <button>
+                <button onClick={updateInterests}>
                     
                     View
                     
                 </button>
 
              </div>
-             
+            {/* </Link>  */}
         </div>
-        </Link>
+        
 
     )
 

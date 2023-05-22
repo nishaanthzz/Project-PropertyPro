@@ -52,7 +52,11 @@ const Navb=()=>
                   
                 </button>
       </Link> 
-      
+      <Link to='/Login' className=' login-btn w-[5%] h-[25%] m-auto duration-[1.02s] hover:scale-[1.02]  '>
+                <button  className=" w-[100%] h-[100%] p-[10%] cursor-pointer  bg-[#292922] flex items-center justify-center border-[3px]  border-[#101001] text-white text[50%]">
+                  Login
+                  </button>    
+      </Link>  
     </nav>
     )
 }

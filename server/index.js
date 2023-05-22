@@ -33,6 +33,8 @@ app.get('/propertypro/get/ForSale', crudfuncs.getForSale);
 
 app.get('/propertypro/get/ForSale/:id', crudfuncs.getForSaleID);
 
+app.patch('/ForSale/UpdateInterests/:id', crudfuncs.updateInterests);
+
 
 
 
