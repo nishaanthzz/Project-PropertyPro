@@ -54,7 +54,7 @@ console.log(obj["data"]["data"])
         </div>
         </div>
          {revealed?
-              <button className="bg-[#ff520e]">
+              <button className="bg-[#ff520e]" onClick={setRevealed(true)}>
                 Reveal Owner Details
               </button>
               :
@@ -68,7 +68,7 @@ console.log(obj["data"]["data"])
                 <h4 className=' text-[#403e3ef5] text-center'>
                   {data.email}</h4>
               </div>
-}
+      }
           
 
         

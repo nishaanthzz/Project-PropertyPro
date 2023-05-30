@@ -12,7 +12,7 @@
 {
     
 
-    @apply  w-64 h-96 overflow-hidden shadow-md transition duration-500 ease-in rounded-xl bg-[aliceblue] 
+    @apply  w-64 h-[28rem] overflow-hidden shadow-md transition duration-500 ease-in rounded-xl bg-[aliceblue] 
 
 }
 .card-body:hover

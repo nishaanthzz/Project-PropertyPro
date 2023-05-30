@@ -1,6 +1,6 @@
 import './Card.css';
 import React from 'react';
-import { Link, redirect } from 'react-router-dom';
+// import { Link, redirect } from 'react-router-dom';
 import axios from 'axios';
 
 const Card=(prop)=>
@@ -34,7 +34,9 @@ console.log(obj)
              </div>
              </div> 
            {/* <Link to={`/Unit/${obj._id}`}> */}
+           <span className='pl-2'>👀{obj.interests} {(obj.interests>=25) && <span>🔥</span>} </span>
              <div className='view-btn'>
+              
                 <button onClick={updateInterests}>
                     
                     View

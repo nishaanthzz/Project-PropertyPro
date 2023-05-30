@@ -11,10 +11,10 @@ const LandscapeCard = (prop) => {
   return (
 
     
-    <div className=' bg-[#ff7664a1] landscape-body w-[80%] m-auto  border-solid border-4 border-[#000000] h-52 rounded-[20px]'>
+    <div className=' bg-[#ff7664a1] landscape-body w-[80%] my-4 mx-auto border-solid border-4 border-[#000000] h-52 rounded-[20px]'>
         <div className='lcard h-10 grid grid-cols-[30%_45%_25%] gap-3'>
           <div className='image-slides'>
-              <img src={obj.imageUrl} alt="No image" className='h-48 my-auto p-2 rounded-[20px]' />
+              <img src={obj.imageUrl} alt="Not Found" className='h-48 my-auto p-2 rounded-[20px]' />
           </div>
           <div className='property-details '>
               <h3 className='text-4xl pt-2 font-[1100] '>{obj.bhk}BHK at {obj.locality}, {obj.city}</h3>
