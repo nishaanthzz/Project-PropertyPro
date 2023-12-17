@@ -11,9 +11,8 @@ mongoose.connect(process.env.CONN_STR,
         useUnifiedTopology: true
 
     }).then((conn)=>
-    {
-    console.log("SUCCESS MONGODB Connection");
-    }
+     console.log("SUCCESS MONGODB Connection")
+
     ).catch((err)=>{console.log("ERROR MONGODB")})
 
 
